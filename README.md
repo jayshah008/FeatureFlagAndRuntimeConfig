@@ -58,3 +58,4 @@ The service must remain consistent with the application features to show.
 
 Either the service will provide high consistency or eventual consistency, in case we provide high consistency then the service should be strong enough to be available all the time.
 
+
