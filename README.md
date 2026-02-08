@@ -58,4 +58,45 @@ The service must remain consistent with the application features to show.
 
 Either the service will provide high consistency or eventual consistency, in case we provide high consistency then the service should be strong enough to be available all the time.
 
+## Implementation
 
+The following features are minimum to be implemented in the project:
+
+### 1. Environment Separation
+   Support:
+
+- dev
+
+- stage
+
+- prod
+### 2. Versioning + Rollback
+  Every change creates a version
+Ability to:
+
+- View history
+
+- Rollback to previous version
+### 3. Local Cache in Client
+Client SDK behavior:
+
+Fetch config from server
+
+Store in memory
+
+If server is down → use last known config
+### 4. Percentage Rollout
+```
+enable_new_ui = 20%
+
+hash(userId) % 100 < 20 → feature ON
+```
+### 5. Audit Log
+
+Track:
+
+Who changed what
+
+When
+
+Old value → new value
